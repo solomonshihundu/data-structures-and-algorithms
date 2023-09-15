@@ -1,4 +1,5 @@
 # method to locate our cards
+# Linear Search
 def locate_card(cards, query):
     
     # create a varible inital position at zero

@@ -2,6 +2,8 @@ import unittest
 from AliceCards import locate_card
 
 class LocateCardTest(unittest.TestCase):
+  
+   # Toggle between linear Search and binary search using appropriate method for Test Cases
     def test_1(self):
         self.assertEqual(locate_card([13, 11, 10, 7, 4, 3, 1, 0],1),6)
     def test_2(self):
@@ -17,7 +19,8 @@ class LocateCardTest(unittest.TestCase):
     def test_7(self):
         self.assertEqual(locate_card([ 19, 18,14, 14, 11, 11, 8, 8, 5, 3, 3, 1],5),8)
     def test_8(self):
-        self.assertEqual(locate_card([ 19, 18, 14, 11, 11, 8, 7, 7, 7, 5, 3, 3, 1],7),6)    
+        self.assertEqual(locate_card([ 19, 18, 14, 11, 11, 8, 7, 7, 7, 5, 3, 3, 1],7),6)
+   
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,4 +1,15 @@
-#Binary Search Implementationx
+#([0,1,3,4,7,10,11,13],1),1)
+def test_location(cards,query,mid):
+    if cards[mid] == query:
+        if mid-1 >= 0 and cards[mid-1] == query:
+            return 'left'
+        else:
+            return 'found'
+    elif cards[mid] > query:
+        return 'left'
+    else:
+        return 'right'
+#Binary Search Implementation
 #1 Pick the middle number in the list
 #2 if it matches our number, return the number
 #3 if its greater than our number, then number is to the right 
@@ -18,15 +29,25 @@ def locate_card_binary(cards,query):
 
         print("lo :", lo," hi :", hi," midpoint :", midpoint," midcard :",midcard)
 
-        # middle card matches our search
-        if midcard == query:
+        result = test_location(cards,query,midpoint)
+
+        if result == 'found':
             return midpoint
-        # explore the right side
-        elif midcard > query:
+        elif result == 'left':
             hi = midpoint-1
-        # explore the left side
-        elif midcard < query:
+        elif result == 'right':
             lo = midpoint+1
+
+
+        # # middle card matches our search
+        # if midcard == query:
+        #     return midpoint
+        # # explore the right side
+        # elif midcard > query:
+        #     hi = midpoint-1
+        # # explore the left side
+        # elif midcard < query:
+        #     lo = midpoint+1
             
 
     return -1

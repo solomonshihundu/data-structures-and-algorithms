@@ -1,3 +1,5 @@
+from Decorators import time_it
+
 # method to locate our cards
 # Linear Search
 def locate_card(cards, query):

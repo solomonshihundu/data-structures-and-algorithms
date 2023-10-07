@@ -8,7 +8,8 @@ def pangrams(str):
     # vars to check for presence of alpha
     is_pan = True
 
-    # remove spaces in the sring
+    # remove spaces in the sring 
+    # and set all chars to lower case
     str = str.replace(" ","").lower()
     
     # create list of all the characters present in the input string

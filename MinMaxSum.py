@@ -11,6 +11,7 @@ import random
 import re
 import sys
 
+
 # Procedure
 # Ensure array is ordered in ASC
 # to get min sum the first n -1 elements

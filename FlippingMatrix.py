@@ -32,11 +32,12 @@ def fliping_matrix(matrix,n):
             # list to store the elements with
             # every cycle i.e [a,a,a,a] .... [d,d,d,d] 
             temp = []
+
             temp.append(matrix[i][j])
             temp.append(matrix[i][2*n-j-1])
             temp.append(matrix[2*n-i-1][j])
             temp.append(matrix[2*n-i-1][2*n-j-1])
-            
+
             # get the maximum value in the array
             arr.append(max(temp))
             

@@ -2,6 +2,10 @@ def factorial_recursive(n):
     if n == 1:
         return n
     else:
+        # Method will call on itself until
+        # the condition n == 1 is met
+        # n x (n-1) x (n-2) x (n-3) x (n-4) x (n-5)
+        # 6 x (5)   x (4)   x (3)   x (2)   x (1)
         return n * factorial_recursive(n-1)
 
 num = 6

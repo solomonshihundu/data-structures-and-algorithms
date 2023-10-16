@@ -17,6 +17,7 @@ def sub_array(arr):
     print(arr[:1]) # [1]
     print(arr[:2]) # [1,2]
     print(arr[2:]) # [3]
+    print(arr[3:]) # []
     print(arr[1:]) # [2,3]
     print(arr[0:]) # [1,2,3]
 arr = [1,2,3]

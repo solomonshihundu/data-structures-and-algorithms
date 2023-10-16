@@ -9,20 +9,29 @@ def permute(arr):
     # store all permutations
     l = []
 
-    
-    for i in range(len(arr)):
-        m = arr[i] 
-        
-        # First Itr, [2, 3]
-        # Sec Itr, [3]
-        # print("Itr : ",i)
-        remList = arr[:i] + arr[i+1:] 
-        # print(remList)
+    # looping through the a list, capture the first element
+    # in the array with every loop
+    # Consider Iteration 1 : 
+    # i = 0
 
+    for i in range(len(arr)):
+        # m = 1
+        m = arr[i] 
+        print("Itr : ",i)
+        print(m)
+        
+        # capture the sub-array excuding the element in the
+        # current iteration [m] 
+        # remList = [2,3]
+        remList = arr[:i] + arr[i+1:] 
+
+        # recursively call the permute method with the sub-arry
+        # as input, looping through the results of permutaion
         for p in permute(remList):
+            # Ensuring the output generated is a list
+            # append the result of each cycle to 'm' then
+            # store the result in a final output list
             if type(p) == list:
-                print("Check 2")
-                print(p)
                 l.append([m] + p)
             else:
                 ls = list(map(int, str(p)))

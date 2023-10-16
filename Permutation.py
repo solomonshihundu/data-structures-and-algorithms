@@ -9,6 +9,7 @@ def permute(arr):
     # store all permutations
     l = []
 
+    
     for i in range(len(arr)):
         m = arr[i] 
         
@@ -19,8 +20,13 @@ def permute(arr):
         # print(remList)
 
         for p in permute(remList):
-            print(p)
-            l.append([m] + p)
+            if type(p) == list:
+                print("Check 2")
+                print(p)
+                l.append([m] + p)
+            else:
+                ls = list(map(int, str(p)))
+                l.append([m] + ls)
     return l
 
 arr = [1,2,3]

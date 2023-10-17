@@ -21,4 +21,11 @@ def sub_array(arr):
     print(arr[1:]) # [2,3]
     print(arr[0:]) # [1,2,3]
 arr = [1,2,3]
-sub_array(arr)
+#sub_array(arr)
+
+def list_from_number(n):
+    ls = list(range(1,n))
+    print(ls)
+
+
+print(list_from_number(5))

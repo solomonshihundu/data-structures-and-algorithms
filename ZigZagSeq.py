@@ -19,7 +19,6 @@ def findZigZagSequence(a, n):
         a[st], a[ed] = a[ed], a[st] # [1,2,5,3,4] , 
         st = st + 1
         ed = ed - 1
-        print(a)
 
     for i in range (n):
         if i == n-1:

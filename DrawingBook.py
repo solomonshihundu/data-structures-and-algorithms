@@ -17,7 +17,7 @@ def page_count(arr,n,p,direction):
     if result == "front":
         # First page of the book is empty thus
         # we start pos, at page obe
-        pos = 1
+        pos = 2
         if p - 1 <= 0:
             count = 0
             return count
@@ -75,8 +75,8 @@ def locate_page(n,p):
 # 5 4 0
 # 6 2 1
 # 7 3 1
-n = 7
-page = 3
+n = 6
+page = 4
 r = locate_page(n,page)
 print(r)
 

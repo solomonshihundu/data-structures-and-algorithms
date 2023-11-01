@@ -1,39 +1,49 @@
 class Solution:
-    def search(self, nums: List[int], target: int) -> int:
+    
+    def __init__(self,nums,target):
+        self.nums = nums
+        self.target = target
 
-        def direction(self,nums,target,midpoint):
-            if target == nums[midpoint]:
-                return 'found'
+    def search(self):
+
+        nums = self.nums
+        target = self.target
+
+        def direction(nums,target,midpoint):
+            if nums[midpoint] == target and midpoint-1 >= 0:
+                if nums[midpoint-1] == target:
+                    return 'left'
+                else:
+                    return 'found'
             elif target > nums[midpoint]:
                 return 'right'
             else:
                 return 'left'
             
+        lo = 0
+        hi = len(nums)-1
+
+        while lo <= hi:
             
-        def perform_search(self):
+            midpoint = (lo + hi) // 2
+            result = direction(nums,target,midpoint)
 
-            lo = 0
-            hi = len(nums)-1
+            if result == 'found':
+                return midpoint
+            elif result == 'left':
+                hi = midpoint-1
+            else:
+                lo = midpoint+1
+        return -1
 
-            while lo <= hi:
-                midpoint = len(lo + hi) // 2
-                self.midpoint = midpoint
+def test_search():
+    arr = [-1,0,3,5,9,12]
+    x = 9
+    result = Solution(arr,x)
+    return result
 
-                result = direction(self,self.nums,self.target,self.midpoint)
-
-                if result == 'found':
-                    return self.midpoint
-                elif result == 'left':
-                    hi = midpoint-1
-                else:
-                    lo = midpoint+1
-            return -1
-        
-    self.perform_search()
     
 
 if __name__ == '__main__':
-    arr = [-1,0,3,5,9,12]
-    x = 9
-    result = Solution.search()
-    print(result)
+    soln = test_search().search()
+    print(soln)
